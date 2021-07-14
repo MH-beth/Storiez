@@ -1,0 +1,48 @@
+.story{
+    text-justify: newspaper;
+    color : whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size : 25px;
+    justify-content: space-between;
+    margin-left : 20px;
+    font-weight : 300;
+}
+
+
+p:hover{
+    text-decoration :none;
+}
+.titles{
+    color : white;
+    cursor : pointer;
+    font-weight: 600;
+    font-size-adjust: initial;
+    font-size : 30px;
+    padding : 20px;
+    color : white;
+    text-transform: capitalize;
+    font-style: oblique;
+}
+article{
+    background-color: #6CA6C1;
+    border : solid 10px white;
+    border-radius : 2rem;
+}
+.totalVotes {
+    justify-content: flex-end;
+    text-align : end;
+    margin-right : 50px;
+    color : #D9534D;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor : pointor;
+}
+.Author{
+    text-align:end;
+    margin-right : 10px;
+    color : white;
+    text-decoration:underline;
+    text-decoration-color : dodgerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size : 30px;
+}

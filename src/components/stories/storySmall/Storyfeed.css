@@ -1,0 +1,23 @@
+.story-component {
+    background-color : skyblue;
+    color : whitesmoke;
+    text-align : center;
+}
+.vote-div{
+    display : flex;
+    align-items: center;
+    text-align : center;
+}
+
+.btn:hover{
+    style : none;
+}
+
+.vote{
+    background-color : dodgerblue;
+    font-size : 20px !important;
+    border-radius : 2rem;
+}
+p{
+    font-size : 30px;
+}

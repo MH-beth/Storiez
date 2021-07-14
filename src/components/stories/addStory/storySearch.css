@@ -1,0 +1,58 @@
+.Feeds-component{
+    text-align : center !important;
+    background-color: skyblue;
+    color : white;
+    border:solid 10px white;
+    border-radius : 5rem;
+}
+#standard-basic{
+    color : white !important;
+}
+
+textarea{
+    background-color : transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    color : white;
+}
+
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size : 20px;
+    text-decoration: underline ;
+    font-weight : 300 ! important;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    text-decoration: underline;
+    text-decoration-color: dodgerblue;
+}
+
+input {
+    font-size : 15px !important;
+    border-radius : 10px !important;
+    outline-width: 0;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+}
+textarea{
+    font-size : 15px !important;
+    border-radius : 10px !important;
+    outline-width: 0;
+    width : 5;
+    height : 16;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Statue{
+    font-size : 20px;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items : center;
+    justify-content: center;
+    display : flex;
+}
+
+.Statue:hover{
+    text-decoration : underline;
+    text-decoration-color:dodgerblue;
+    cursor : pointer;
+}

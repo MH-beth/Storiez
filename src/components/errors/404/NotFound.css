@@ -1,0 +1,46 @@
+.notfound-container{
+    text-align : center;
+}
+.errorcode {
+    font-size : 250px !important;
+    font-weight : 1000;
+    text-decoration : none;
+}
+
+h2{
+    font-size : 50px !important;
+    font-weight : 600;
+    color : #6C787D;
+};
+
+p{
+    font-size : 20px;
+    font-weight : 200;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+@media(max-width : 800px)
+{
+    .notfound-container{
+        text-align : center;
+    }
+    .errorcode {
+        font-size : 120px !important;
+        font-weight : 1000;
+        text-decoration : none;
+    }
+    
+    h2{
+        font-size : 25px !important;
+        font-weight : 600;
+        color : #6C787D;
+    };
+    
+    p{
+        font-size : 20px;
+        font-weight : 200;
+        font-family: Arial, Helvetica, sans-serif;
+    
+    }
+}
