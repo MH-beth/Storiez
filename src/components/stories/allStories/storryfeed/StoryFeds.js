@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import NotFound from '../../../errors/404/NotFound';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 
+
 const StoryFeds = ({story}) => {
     const url = `/${story.username}/${story.link}`;
     console.log(url);

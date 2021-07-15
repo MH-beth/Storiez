@@ -11,7 +11,7 @@ export default function FeedForm() {
     const [feed , setFeed] = React.useState("");
 
     const sendFeed = () => {
-        Axios.post("http://localhost:8080/feed", 
+        Axios.post("https://storiez-server.herokuapp.com/feed", 
         {
             username : username,
             feed : feed

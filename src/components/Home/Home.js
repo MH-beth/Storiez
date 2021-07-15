@@ -8,6 +8,7 @@ const Home = () => {
         <div>
             <Search />
             <h1 className = "title">Top 5 Last Stories :</h1>
+            <br/>
             <LastStories />
         </div>
     )

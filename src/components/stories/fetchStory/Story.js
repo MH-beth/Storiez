@@ -9,7 +9,7 @@ const Story = ({match}) => {
     const [statue , setStatue] = useState("Succesfully Found");
     const [storyData , setStoryData] = useState({});
 
-    const url = `http://localhost:8080/story/${username}/${title}`;
+    const url = `https://storiez-server.herokuapp.com/story/${username}/${title}`;
 
     useEffect(() => {
         Axios.post(url , {})

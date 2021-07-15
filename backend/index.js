@@ -3,15 +3,16 @@ const mysql = require("mysql");
 const cors = require("cors");
 
 const app = express();
+const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cors());
 
 const db = mysql.createConnection(
     {
-        user : "root",
-        host : "localhost",
-        password : "",
-        database : "story"
+        user : "sql11425217",
+        host : "sql11.freesqldatabase.com",
+        password : "sdnSPXErbF",
+        database : "sql11425217"
     }
 );
 
@@ -137,7 +138,23 @@ app.post("/all-stories", (req , res) =>{
     })
 })
 
+app.post("/vote/:username/:title", (req , res) => {
+    const username = req.params.username;
+    const title = req.params.title;
+    const votes = req.body.votes;
+    db.query("INSERT INTO userstory(votes) WHERE username = ? AND title =? votes = ? ", [username , title  ,votes] , (err , results) => {
+        if(err)
+        {
+            res.send({statue : err});
+        }
+        if(results)
+        {
+            res.send({statue :"Successfully Voted !"});
+        }else{
+            res.send({statue :"An Error Have Occured"});
+        }
+    })
 
+})
 
-
-app.listen(8080, ()=> {console.log("Running on port 8080 ....")});
+app.listen(port, ()=> {console.log(`Running on Port ${port}`)});

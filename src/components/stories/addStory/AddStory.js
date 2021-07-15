@@ -31,7 +31,7 @@ export default function AddStory() {
     
 
     const addStory = () =>{
-        axios.post("http://localhost:8080/addStory", {
+        axios.post("https://storiez-server.herokuapp.com/addStory", {
             username : username,
             email : email,
             title : title,

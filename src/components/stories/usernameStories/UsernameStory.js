@@ -14,7 +14,7 @@ const UsernameStory = ({match}) => {
 
     useEffect(() => {
         const urls = match.params.username;
-        Axios.post("http://localhost:8080/user/"+urls, {})
+        Axios.post("https://storiez-server.herokuapp.com/user/"+urls, {})
             .then((response) => {
                 if(response.data.statue)
                 {

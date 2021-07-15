@@ -2,6 +2,7 @@ import React from 'react'
 import {useEffect , useState} from "react";
 import axios from 'axios';
 import StoryFeds from '../stories/allStories/storryfeed/StoryFeds';
+import "./Laststories.css";
 
 
 const LastStories = () => {
@@ -11,7 +12,7 @@ const LastStories = () => {
 
 
     useEffect(() => {
-        axios.post("http://localhost:8080/last-stories",{})
+        axios.post("https://storiez-server.herokuapp.com/last-stories",{})
             .then(response => {
                 if(response.data.statue)
                 {
@@ -25,7 +26,7 @@ const LastStories = () => {
     if(stories.length > 0)
     {
         return(
-            <div>
+            <div className = "elementMapped">
                 {stories.map(sto => (<StoryFeds story = {sto}/>))}
             </div>
         );

@@ -1,6 +1,7 @@
 import React , {useEffect}from 'react'
 import Axios from "axios";
 import StoryFeds from './storryfeed/StoryFeds';
+import "./Storiez.css";
 
 const AllStories = () => {
 
@@ -8,7 +9,7 @@ const AllStories = () => {
     const [stories , setStories] = React.useState([]);
 
     useEffect(() => {
-        Axios.post("http://localhost:8080/all-stories", {})
+        Axios.post("https://storiez-server.herokuapp.com/all-stories", {})
             .then(response => {
                 if(response.data.statue)
                 {
@@ -22,7 +23,7 @@ const AllStories = () => {
     if(stories !==undefined )
     {
       return(
-        <div>
+        <div className = "mappe">
           <ul>
           {stories.map((sto , key) => {
             return(

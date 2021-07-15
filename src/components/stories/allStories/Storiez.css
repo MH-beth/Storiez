@@ -1,0 +1,4 @@
+.mappe > ul{
+    display : grid;
+    grid-gap : 20px 50px;
+}

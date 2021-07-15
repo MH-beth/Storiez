@@ -2,12 +2,15 @@
     background-color : #4C83A0;
     color : whitesmoke;
     text-align : center;
-    border:solid 10px #EDF060;
+    border:solid 10px darkorange;
+    box-shadow: 5px 5px 5px 1px dodgerblue;
     grid-auto-columns: auto;
     position: relative;
     padding : 0.2rem;
-    justify-content: space-around;
+    justify-content: center;
     text-justify:newspaper;
+    border-radius : 2rem;
+    padding: auto;
 }
 .vote-div{
     display : flex;

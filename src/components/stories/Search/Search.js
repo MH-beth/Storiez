@@ -8,7 +8,7 @@ export default function Search() {
     const [statue , setStatue]  =React.useState("");
     const [username , setUsername] = React.useState("");
     const [title , setTitle] = React.useState("");
-    let link = `/search/${username}/${title}`;
+    let link = `https://storiez-server.herokuapp.com/search/${username}/${title}`;
 
 
     return (
