@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import Button from '@material-ui/core/Button';
 import InfoIcon from '@material-ui/icons/Info';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { TextField } from '@material-ui/core';
 import "./storySearch.css";
 
@@ -44,6 +45,7 @@ export default function AddStory() {
             }
             else
             {
+                <CircularProgress/>
                 setStatue(response.data.message);
             }
         })

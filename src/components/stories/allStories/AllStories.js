@@ -1,6 +1,7 @@
 import React , {useEffect}from 'react'
 import Axios from "axios";
 import StoryFeds from './storryfeed/StoryFeds';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import "./Storiez.css";
 
 const AllStories = () => {
@@ -35,12 +36,20 @@ const AllStories = () => {
           </ul>
         </div>
       )
-    }else {
+    }
+    else if (statue.length >0) {
       return(
         <div>
           <p>Opps An error have occured : {statue}</p>
         </div>
       )
+    }
+    else{
+      return(
+        <div>
+            <CircularProgress />
+        </div>
+    );
     }
 }
 

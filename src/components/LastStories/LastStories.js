@@ -2,6 +2,7 @@ import React from 'react'
 import {useEffect , useState} from "react";
 import axios from 'axios';
 import StoryFeds from '../stories/allStories/storryfeed/StoryFeds';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import "./Laststories.css";
 
 
@@ -31,10 +32,18 @@ const LastStories = () => {
             </div>
         );
     }
-    else{
+    if(statue.length > 0){
         return(
             <div>
                 <p>An Error Have Occured {statue}</p>
+            </div>
+        );
+    }
+    else
+    {
+        return(
+            <div className = "wait">
+                <CircularProgress />
             </div>
         );
     }

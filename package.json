@@ -17,10 +17,8 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
-    "react-recaptcha": "^2.3.10",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "recaptcha-v3": "^1.9.1",
+    "react-scripts": "^4.0.3",
     "rsuite": "^4.10.2",
     "web-vitals": "^1.0.1"
   },

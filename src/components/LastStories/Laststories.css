@@ -2,3 +2,8 @@
     display : grid;
     grid-gap : 20px 50px;
 }
+
+.wait{
+    text-align : center;
+    justify-content: center;
+}
