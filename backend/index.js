@@ -9,12 +9,69 @@ app.use(cors());
 
 const db = mysql.createConnection(
     {
-        user : "local",
-        host : "local",
-        password : "local",
-        database : "local"
+        user : "sql11425217",
+        host : "sql11.freesqldatabase.com",
+        password : "sdnSPXErbF",
+        database : "sql11425217"
     }
 );
+
+app.post("/login", (req , res) => {
+    const username = req.params.username;
+    const password = req.params.password;
+    db.query("SELECT * FROM users WHERE username = ? AND password = ?", [username , password], (err , results)=>{
+        if(err)
+        {
+            res.send({statue : err});
+        }
+        if(results)
+        {
+            res.send({statue : "User Found", message : results});
+        }else{
+            res.send({statue : "An Error Have Occured"});
+        }
+    })
+})
+
+app.post("/register", (req , res) => {
+    const username = req.params.username ;
+    const password = req.params.password;
+    const email = req.params.email;
+    const found = false;
+    const query1 = "SELECT * FROM users WHERE username = ? OR email = ?";
+    const query2 = "INSERT INTO users(username , password , email) values (?,?,?)";
+    db.query(query1, [username , email], (err , results) => {
+        if(err)
+        {
+            res.send({statue  : err});
+        }
+        if(results)
+        {
+            found = true;
+            res.send({statue : `${username} and/or ${email} is already used !`});
+        }
+        else{
+            found = false;
+        }
+    });
+    if(!found)
+    {
+        db.query(query2 , [username ,password , email], (err , results) => {
+            if(err)
+            {
+                res.send({statue : err});
+            }
+            if(results)
+            {
+                res.send({statue : `${username} succesfully Registered`})
+            }
+            else{
+                res.send({statue : "An Error Have Occured !"});
+            }
+        })
+    }
+
+})
 
 app.post("/feed", (req , res) => {
     const username = req.body.username;
