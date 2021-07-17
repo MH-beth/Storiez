@@ -3,7 +3,6 @@ import {useEffect , useState} from "react";
 import NotFound from "../../errors/404/NotFound"
 import "./StoryArt.css";
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import axios from 'axios';
 
 
@@ -21,10 +20,6 @@ const StoryArticle = ({storyData}) => {
             })
     }, []);
     }
-
-    const sleep = (milliseconds) => {
-        return new Promise(resolve => setTimeout(resolve, milliseconds))
-      }
 
     if(storyData.title !== undefined)
     {
@@ -60,20 +55,11 @@ const StoryArticle = ({storyData}) => {
             )
         }
     }
-    else if(statue.length > 0 )
+    else
     {
         return(
             <div>
                 <NotFound />
-            </div>
-        )
-    }
-    else
-    {
-        return(
-            <div className = "wait">
-                <CircularProgress />
-                <NotFound/>
             </div>
         )
     }
